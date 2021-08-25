@@ -1,0 +1,10 @@
+@import "./../../../assets/sass/components/fonts";
+
+.template {
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: $font-family;
+}

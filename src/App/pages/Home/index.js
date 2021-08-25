@@ -1,12 +1,13 @@
-import React from "react"
-import Template from "../../hoc/Template"
+import React from "react";
+import { Products } from "../../components/Home/Products";
+import { Template } from "../../shared/Template";
 
-const Home = () => {
-  return <div className="home">
-    <Template>
-      <div>body</div>
+import "./styles.scss"
+
+export const Home = () => {
+  return (
+    <Template className={"home"}>
+      <Products />
     </Template>
-  </div>
-}
-
-export default Home
+  );
+};

@@ -1,0 +1,9 @@
+@import "./../../../../assets/sass/components/variables";
+
+header {
+  background-color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  padding: 1em;
+}
