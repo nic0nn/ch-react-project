@@ -5,15 +5,15 @@ export const ROUTES = [
   },
   {
     name: "celulares",
-    link: "/products/cellphones"
+    link: "/productos/cellphones"
   },
   {
     name: "servicio técnico",
-    link: "/products/technical-services"
+    link: "/productos/technical-services"
   },
   {
     name: "accesorios",
-    link: "/products/accessories",
+    link: "/productos/accessories",
   },
   {
     name: "contacto",
