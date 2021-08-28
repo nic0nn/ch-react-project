@@ -1,17 +1,26 @@
 import React, { useEffect } from "react";
+import { useState } from "react";
 import { ProductsList } from "../List";
 
-import { stock } from "./stock";
+import { products } from "./products";
 
 export const ProductsContainer = () => {
+  const [stock, setStock] = useState();
+
+  const getData = () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(products);
+      }, 2000);
+    });
+  };
 
   useEffect(() => {
     (async () => {
-      setTimeout(() => {
-
-      }, 300)
-    })()
-  }, [])
+      const products = await getData();
+      setStock(products);
+    })();
+  }, []);
 
   return (
     <React.Fragment>
