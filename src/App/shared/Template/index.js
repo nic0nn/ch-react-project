@@ -1,5 +1,7 @@
 import React from "react";
 
+import classNames from "classnames";
+
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
@@ -7,7 +9,7 @@ import "./styles.scss";
 
 export const Template = ({ className, children }) => {
   return (
-    <div className={`template ${className ? className : ""}`}>
+    <div className={classNames("template", className)}>
       <Header />
       {children}
       <Footer />

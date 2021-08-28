@@ -1,19 +1,15 @@
 import React from "react";
-import { Link } from "../../../Link";
-import { ROUTES } from "./NavLinks/routes";
-
+import { ROUTES } from "../../../../routes";
+import { Link } from "react-router-dom";
 import "./styles.scss";
 
 export const NavBar = () => {
   return (
-    <nav>
+    <nav className={"nav-links"}>
       {ROUTES.map((route, index) => (
-        <Link
-          key={`navbar-${index}`}
-          text={route.name}
-          href="#"
-          className="nav-link"
-        />
+        <Link key={`nav-link-${index}`} className={"nav-link"} to={route.link}>
+          {route.name}
+        </Link>
       ))}
     </nav>
   );

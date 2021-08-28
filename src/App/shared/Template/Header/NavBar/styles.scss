@@ -5,4 +5,9 @@ nav {
   text-transform: uppercase;
   width: 50%;
   margin: 0 auto;
+
+  .nav-link {
+    text-decoration: none;
+    color: #ffffff;
+  }
 }

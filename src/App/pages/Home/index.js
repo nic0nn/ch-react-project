@@ -1,10 +1,6 @@
 import React from "react";
-import { Products } from "../../components/Home/Products";
+import { Products } from "../../components/Products";
 
-import "./styles.scss"
+import "./styles.scss";
 
-export const Home = () => {
-  return (
-      <Products />
-  );
-};
+export const Home = () => <Products />;
