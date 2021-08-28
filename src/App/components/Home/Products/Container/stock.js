@@ -29,4 +29,34 @@ export const stock = [
     generatePublicURL("e6s.jpeg"),
     "Gris. Precio: $19500"
   ),
+  new Product(
+    "Motorola E6s",
+    generatePublicURL("e6s.jpeg"),
+    "Gris. Precio: $19500"
+  ),
+  new Product(
+    "Motorola E6s",
+    generatePublicURL("e6s.jpeg"),
+    "Gris. Precio: $19500"
+  ),
+  new Product(
+    "Motorola E6s",
+    generatePublicURL("e6s.jpeg"),
+    "Gris. Precio: $19500"
+  ),
+  new Product(
+    "Motorola E6s",
+    generatePublicURL("e6s.jpeg"),
+    "Gris. Precio: $19500"
+  ),
+  new Product(
+    "Motorola E6s",
+    generatePublicURL("e6s.jpeg"),
+    "Gris. Precio: $19500"
+  ),
+  new Product(
+    "Motorola E6s",
+    generatePublicURL("e6s.jpeg"),
+    "Gris. Precio: $19500"
+  ),
 ];

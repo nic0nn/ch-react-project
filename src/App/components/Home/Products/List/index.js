@@ -4,7 +4,7 @@ import { Product } from "./Product";
 
 export const ProductsList = ({ data }) => {
   return (
-    <Grid className="products" container spacing={2}>
+    <Grid className="products" container justifyContent="center">
       {data.map((d, index) => (
         <Grid item>
           <Product key={index} info={d} />

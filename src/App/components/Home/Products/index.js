@@ -5,8 +5,8 @@ import "./styles.scss"
 
 export const Products = () => {
   return (
-    <div className="products">
+    <React.Fragment>
       <ProductsContainer />
-    </div>
+    </React.Fragment>
   )
 }

@@ -4,7 +4,7 @@ import React from "react";
 import "./styles.scss";
 
 export const Product = ({ info }) => {
-  console.log('info.image :>> ', info.image);
+  console.log("info.image :>> ", info.image);
   return (
     <Card className={"product"}>
       <CardHeader title={info.name} />
