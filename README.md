@@ -19,3 +19,4 @@ npm start
 Nicolás Bastias
 
 ### Profesor
+Conrado Lanusse
