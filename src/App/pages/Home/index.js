@@ -1,6 +1,6 @@
 import React from "react";
-import { Products } from "../../components/Products";
+import { ProductsListContainer } from "../../containers/ProductsListContainer";
 
 import "./styles.scss";
 
-export const Home = () => <Products />;
+export const Home = () => <ProductsListContainer />;

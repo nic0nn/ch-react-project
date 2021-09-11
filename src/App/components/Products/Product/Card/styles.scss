@@ -1,0 +1,28 @@
+.product {
+  width: 300px;
+  margin: 1em;
+  
+  &.MuiPaper-root {
+    background-color: #a9d6e5;
+  }
+
+  .MuiCardMedia-root {
+    height: 300px;
+  }
+
+  .MuiCardContent-root {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .MuiCardActions-root {
+  //   position: relative;
+
+  //   button {
+  //     position: absolute;
+  //     top: -50px;
+  //     right: 20px;
+  //   }
+  // }
+}

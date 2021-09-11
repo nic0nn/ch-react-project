@@ -1,0 +1,18 @@
+@import "./../../../../../assets/sass/components/variables";
+
+.product-actions {
+  display: flex;
+
+  button {
+    background-color: $primary-color;
+    color: white;
+    
+    &.MuiButton-root:hover {
+      background-color: $primary-color;
+    }
+
+    &.Mui-disabled {
+      background-color: #cacaca;
+    }
+  }
+}

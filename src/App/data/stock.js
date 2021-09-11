@@ -9,7 +9,8 @@ export const stock = [
     image: generatePublicURL("a21.jpeg"),
     description: "Blanco y negro",
     price: 37000,
-    category: "cellphones"
+    category: "celulares",
+    stock: 4
   },
   {
     _id: "2",
@@ -17,7 +18,8 @@ export const stock = [
     image: generatePublicURL("k40s.jpeg"),
     description: "Negro",
     price: 22000,
-    category: "cellphones"
+    category: "celulares",
+    stock: 10
   },
   {
     _id: "3",
@@ -25,7 +27,8 @@ export const stock = [
     image: generatePublicURL("e6.jpeg"),
     description: "Rosa",
     price: 18500,
-    category: "cellphones"
+    category: "celulares",
+    stock: 1
   },
   {
     _id: "4",
@@ -33,7 +36,8 @@ export const stock = [
     image: generatePublicURL("e6s.jpeg"),
     description: "Gris",
     price: 19500,
-    category: "cellphones"
+    category: "celulares",
+    stock: 20
   },
   {
     _id: "5",
@@ -41,7 +45,8 @@ export const stock = [
     image: generatePublicURL("royalcell.jpg"),
     description: "3.8A V8",
     price: 400,
-    category: "accessories"
+    category: "accesorios",
+    stock: 3
   },
   {
     _id: "6",
@@ -49,6 +54,7 @@ export const stock = [
     image: generatePublicURL("windows.png"),
     description: "Incluye backup de datos",
     price: 3000,
-    category: "technical-services"
+    category: "servicios",
+    stock: 10
   },
 ]

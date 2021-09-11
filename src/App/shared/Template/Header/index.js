@@ -20,7 +20,7 @@ export const Header = () => {
           <SearchBar />
         </Grid>
         <Grid item xs={3}>
-          <ShortCuts />
+          <ShortCuts count={3}/>
         </Grid>
         <Grid item xs={12}>
           <NavBar />

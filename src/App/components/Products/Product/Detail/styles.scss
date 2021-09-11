@@ -1,0 +1,11 @@
+.product-detail {
+  .product-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 1em;
+    span {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}

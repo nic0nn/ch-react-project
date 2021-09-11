@@ -7,4 +7,15 @@
   flex-direction: column;
   justify-content: space-between;
   font-family: $font-family;
+
+  .content {
+    height: 100%;
+  }
+
+  a {
+    color: white;
+    :visited {
+      color: white;
+    }
+  }
 }

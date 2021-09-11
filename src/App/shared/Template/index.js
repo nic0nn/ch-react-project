@@ -11,7 +11,9 @@ export const Template = ({ className, children }) => {
   return (
     <div className={classNames("template", className)}>
       <Header />
-      {children}
+      <div className="content">
+        { children }
+      </div>
       <Footer />
     </div>
   );

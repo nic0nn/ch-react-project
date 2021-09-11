@@ -1,12 +1,12 @@
 import React from 'react'
-import { ProductsContainer } from './Container'
+import { ProductsListContainer } from '../../containers/ProductsListContainer'
 
 import "./styles.scss"
 
 export const Products = () => {
   return (
     <React.Fragment>
-      <ProductsContainer />
+      <ProductsListContainer />
     </React.Fragment>
   )
 }
