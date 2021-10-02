@@ -1,15 +1,17 @@
-import { Grid } from "@material-ui/core";
 import React from "react";
 import { ProductCard } from "../Product/Card";
+import { Col, Container, Row } from "react-bootstrap";
 
 export const ProductsList = ({ data }) => {
   return (
-    <Grid className="products" container justifyContent="center">
-      {data?.map((d, index) => (
-        <Grid key={`products-grid-${index}`} item>
-          <ProductCard key={index} product={d} />
-        </Grid>
-      ))}
-    </Grid>
+    <Container fluid={"true"} className="products">
+      <Row>
+        {data?.map((d, index) => (
+          <Col xs={12} lg={6  } key={`products-grid-${index}`}>
+            <ProductCard key={index} product={d} />
+          </Col>
+        ))}
+      </Row>
+    </Container>
   );
 };

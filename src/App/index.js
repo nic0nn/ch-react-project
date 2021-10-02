@@ -1,13 +1,16 @@
 import React from "react";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import { Template } from "./shared/Template";
-import { Home } from "./pages/Home";
-import { Contact } from "./pages/Contact";
-import { Products } from "./components/Products";
+
+import { HomePage } from "./pages/Home";
+import { Products } from "./pages/Products";
+import { CartInfo } from "./pages/CartInfo";
+import { OrderInfo } from "./pages/OrderInfo";
+import { ProductDetailPage } from "./pages/ProductDetail";
+
 import { ShoppingCartProvider } from "./context/ShoppingCart";
-import { Detail } from "./pages/Detail";
-import { NotImplemented } from "./shared/NotImplemented";
 
 function App() {
   return (
@@ -16,16 +19,19 @@ function App() {
         <ShoppingCartProvider>
           <Template>
             <Switch>
-              <Route exact path={"/"} component={Home} />
-              <Route path={"/home"} component={Home} />
+              <Route exact path={"/"} component={HomePage} />
+              <Route path={"/home"} component={HomePage} />
               <Route
                 exact
                 path={"/productos/:productId/detalle"}
-                component={Detail}
+                component={ProductDetailPage}
               />
-              <Route path={"/productos/:category"} component={Products} />
-              <Route path={"/contacto"} component={Contact} />
-              <Route path={"/cart"} component={NotImplemented} />
+              <Route
+                path={"/productos/categoria/:category"}
+                component={Products}
+              />
+              <Route path={"/cart"} component={CartInfo} />
+              <Route path={"/order/:orderId"} component={OrderInfo} />
             </Switch>
           </Template>
         </ShoppingCartProvider>

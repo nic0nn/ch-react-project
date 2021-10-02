@@ -1,78 +1,52 @@
-import { Grid } from "@material-ui/core";
 import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
-import { ProductActions } from "../../components/Products/Product/Actions";
-import { ProductDetail } from "../../components/Products/Product/Detail";
-import { ProductImage } from "../../components/Products/Product/Image";
+
 import { CounterContext } from "../../context/Counter";
-import { ShoppingCart } from "../../context/ShoppingCart";
-import { Loading } from "../../shared/Loading";
+import { ShoppingCartContext } from "../../context/ShoppingCart";
 
-import swal from "sweetalert2";
+import { ProductDetail } from "../../components/Products/Product/Detail";
 
-import { stock as products } from "./../../data/stock";
+import { getProduct } from "../../firebase/utils";
 
 import "./styles.scss";
+import { Loading } from "../../shared/Loading";
 
 export const ProductDetailContainer = () => {
-  const { add } = useContext(ShoppingCart);
-  const { counter } = useContext(CounterContext);
+  const { addProduct } = useContext(ShoppingCartContext);
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const { productId } = useParams();
+  const { counter } = useContext(CounterContext);
 
-  const [product, setProduct] = useState({});
-  const [loading, setLoading] = useState(false);
-
-  const handleAdd = () => {
-    swal
-      .fire({
-        title: "Agregar al carrito",
-        text: "¿Desea agregar al carrito la cantidad de productos seleccionados?",
-        showCancelButton: true,
-        cancelButtonText: "Cancelar",
-        confirmButtonText: "Aceptar",
-      })
-      .then(({ isConfirmed }) => {
-        if (isConfirmed) add({ product, quantity: counter });
-      });
-  };
+  const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    const getData = () => {
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          const product = products.find((p) => p._id === productId);
-          resolve(product);
-        }, 2000);
-      });
+    const getData = async () => {
+      const product = await getProduct(productId);
+      return product;
     };
 
     (async () => {
-      setLoading(true);
+      setIsLoading(true);
       const product = await getData();
-      setLoading(false);
+      setIsLoading(false);
       setProduct(product);
     })();
   }, [productId]);
 
-  if (loading) return <Loading size="30px" />;
-
-  if (!product) return <div>No se encontró el producto</div>;
+  if (!product) {
+    if (!isLoading) return <div>No se encontró el producto</div>;
+    return null;
+  }
 
   return (
-    <Grid
-      className={"product-detail-container"}
-      container
-      alignItems="center"
-      justifyContent="center"
-    >
-      <Grid item xs={6}>
-        <ProductImage {...product} />
-      </Grid>
-      <Grid item xs={6}>
-        <ProductDetail {...product} />
-        <ProductActions handleAdd={handleAdd} {...product} />
-      </Grid>
-    </Grid>
+    <Loading state={isLoading} size={40}>
+      <ProductDetail
+        product={product}
+        addProduct={() => addProduct({ ...product, quantity: counter })}
+      />
+      ;
+    </Loading>
   );
 };

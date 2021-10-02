@@ -1,9 +1,9 @@
 import { CounterContextProvider } from "../../context/Counter";
 import { ProductDetailContainer } from "../../containers/ProductDetailContainer";
 
-export const Detail = () => {
+export const ProductDetailPage = () => {
   return (
-    <CounterContextProvider>
+    <CounterContextProvider value={0}>
       <ProductDetailContainer />
     </CounterContextProvider>
   );

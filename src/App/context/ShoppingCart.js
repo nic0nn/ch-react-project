@@ -1,14 +1,30 @@
 import { createContext } from "react";
+
 import { useShoppingCart } from "../hooks";
 
-export const ShoppingCart = createContext([]);
+export const ShoppingCartContext = createContext([]);
 
 export const ShoppingCartProvider = ({ children }) => {
-  const [shoppingCart, add, remove, empty, count] = useShoppingCart();
-
+  const [
+    shoppingCart,
+    addProduct,
+    removeProduct,
+    clearCart,
+    getCartQuantity,
+    getCartTotal,
+  ] = useShoppingCart();
   return (
-    <ShoppingCart.Provider value={{ shoppingCart, add, remove, empty, count }}>
+    <ShoppingCartContext.Provider
+      value={{
+        shoppingCart,
+        addProduct,
+        removeProduct,
+        clearCart,
+        getCartQuantity,
+        getCartTotal,
+      }}
+    >
       {children}
-    </ShoppingCart.Provider>
+    </ShoppingCartContext.Provider>
   );
 };

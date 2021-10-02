@@ -1,0 +1,15 @@
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  position: absolute;
+  right: 43%;
+  text-align: center;
+  margin-top: 6em;
+
+  a {
+    margin-top: 1em
+  }  
+
+}

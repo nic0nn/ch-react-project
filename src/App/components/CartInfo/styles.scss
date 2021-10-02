@@ -1,0 +1,15 @@
+.cart-info {
+  padding: 2em 4em 6em;
+  
+  > .btn {
+    margin-bottom: 4em;
+  }
+  .cart-total {
+    color: #333;
+    font-size: 24px;
+  
+    span {
+      font-size: 48px;
+    }
+  }
+}

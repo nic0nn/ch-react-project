@@ -1,0 +1,55 @@
+$size: 80vh;
+
+.slider {
+  overflow: hidden;
+  height: $size;
+
+  .carousel-item > div {
+    background-position: top;
+    height: 80vh;
+    background-size: cover;
+  }
+
+  .carousel-item {
+    opacity: 1 !important;
+    overflow-x: hidden;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+  }
+
+  .carousel-inner {
+    overflow: hidden;
+  }
+
+  .carousel-fade .carousel-item {
+    opacity: unset !important;
+  }
+
+  .carousel-arrow {
+    padding: 1em;
+    background-color: #014f86;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      color: #fff;
+      font-size: 30px;
+    }
+    &.slick-prev {
+      left: 3% !important;
+      z-index: 1;
+      padding: 1em;
+    }
+    &.slick-next {
+      right: 3% !important;
+      z-index: 1;
+    }
+  }
+}

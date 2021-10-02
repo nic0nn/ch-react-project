@@ -7,11 +7,8 @@
     background-color: $primary-color;
     color: white;
     
-    &.MuiButton-root:hover {
-      background-color: $primary-color;
-    }
 
-    &.Mui-disabled {
+    &:disabled {
       background-color: #cacaca;
     }
   }

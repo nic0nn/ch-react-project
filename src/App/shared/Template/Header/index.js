@@ -1,10 +1,8 @@
 import React from "react";
 
-import { Grid } from "@material-ui/core";
+import { Col, Row } from "react-bootstrap";
 
-import { Logo } from "../../Logo";
 import { NavBar } from "./NavBar";
-import { SearchBar } from "./SearchBar";
 import { ShortCuts } from "./ShortCuts";
 
 import "./styles.scss";
@@ -12,20 +10,14 @@ import "./styles.scss";
 export const Header = () => {
   return (
     <header className="header">
-      <Grid container justifyContent={"center"} alignItems={"center"}>
-        <Grid item xs={3}>
-          <Logo />
-        </Grid>
-        <Grid item xs={6}>
-          <SearchBar />
-        </Grid>
-        <Grid item xs={3}>
-          <ShortCuts count={3}/>
-        </Grid>
-        <Grid item xs={12}>
+      <Row>
+        <Col xs={10}>
           <NavBar />
-        </Grid>
-      </Grid>
+        </Col>
+        <Col xs={1}>
+          <ShortCuts />
+        </Col>
+      </Row>
     </header>
   );
 };
